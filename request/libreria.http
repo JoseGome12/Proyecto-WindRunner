@@ -1,0 +1,22 @@
+GET  http://localhost:3000/Libros
+###
+POST http://localhost:3000/AgregarLibro
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "idLibro": 1
+}
+###
+POST http://localhost:3000/NuevoUsuario
+Content-Type: application/json
+
+{
+    "usuario": "admin123",
+    "contraseña": "xidhsdsdz"
+}
+
+###
+GET http://localhost:3000/verUsuarios/admin123/xidhsdsdz
+###
+GET http://localhost:3000/verTusLibros/1

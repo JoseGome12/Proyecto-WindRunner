@@ -1,0 +1,52 @@
+/* Estilos para el contenedor principal */
+.container {
+    margin: 20px auto;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos para el encabezado h1 */
+  .container h1 {
+    font-weight: bold;
+    color: #0066FF;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para las etiquetas y los campos de entrada */
+  .container label, .container input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .container input {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  /* Estilos para el botón de inicio de sesión */
+  .container button {
+    background-color: #FF33CC;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el botón de crear usuario */
+  #Button2 {
+    background-color: #FF33CC;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  #Button2:hover, button:hover {
+    background-color: #FF3399;
+  }
+  
