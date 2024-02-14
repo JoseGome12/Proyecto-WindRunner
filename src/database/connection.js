@@ -4,7 +4,7 @@ const dbSettings = {
     user: 'Tzuna',
     password: '123456',
     server: 'localhost',
-    database: 'BibliotecaP',
+    database: 'WindrunnerDevelopers',
     options: {
         encrypt: true,
         trustServerCertificate: true

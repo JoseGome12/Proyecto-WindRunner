@@ -1,22 +1,49 @@
-GET  http://localhost:3000/Libros
+GET  http://localhost:3000/Software
 ###
-POST http://localhost:3000/AgregarLibro
+POST http://localhost:3000/agregarCarrito
 Content-Type: application/json
 
 {
     "idUsuario": 1,
-    "idLibro": 1
+    "idSoftware": 1,
+    "Precio":1000
 }
 ###
 POST http://localhost:3000/NuevoUsuario
 Content-Type: application/json
 
 {
-    "usuario": "admin123",
-    "contraseña": "xidhsdsdz"
+    "cedula": "0000000",
+    "usuario": "admin",
+    "contraseña": "admin",
+    "Correo":"jose@gmail.com",
+    "Telefono":7777,
+    "Ubicacion":"home"
 }
 
 ###
 GET http://localhost:3000/verUsuarios/admin123/xidhsdsdz
 ###
-GET http://localhost:3000/verTusLibros/1
+GET http://localhost:3000/verTuCarrito/1
+###
+DELETE http://localhost:3000/EliminarCarrito/3
+###
+PUT http://localhost:3000/HacerComprar/1
+### 
+http://localhost:3000/SoftwareID/1
+###
+PUT http://localhost:3000/CambiarContrasenna
+Content-Type: application/json
+
+{
+    "correo":"jose@gmail.com",
+    "contra":"pene"
+}
+###
+POST http://localhost:3000/EnviarToken/jose@gmail.com
+###
+GET https://tipodecambio.paginasweb.cr/api
+###
+GET https://localhost:7005/tribunalsupremo/ObtenerPersona/305370794
+###
+GET http://localhost:3000/verUsuario/2

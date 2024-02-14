@@ -1,0 +1,777 @@
+:root {
+    --blanco: #ffff;
+    --Oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #097a70;
+    --gris: #757575;
+    --fuenteprincipal: 3.8rem;
+    --grisclaro: #dfe9f3;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.sombraC {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    background-color: #FAFAD2;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 6rem;
+    text-align: left;
+    margin-top: 5rem;
+}
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    background-color: #1C1D2C;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.sombraM {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+/* #5F9EA0 */
+body {
+    font-size: 16px; /* 1 rem = 10px*/
+    font-family: 'Bebas Neue', cursive;
+    background-color: #5F9EA0;
+    margin: 0;
+    padding: 0;
+}
+.bodycarrito{
+    font-size: 16px; /* 1 rem = 10px*/
+    font-family: 'Bebas Neue', cursive;
+    background-color:#5F9EA0;
+
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+.titulo{
+    color: #FFFACD;
+    font-size: 8rem;
+}
+
+.titulo span {
+    font-size: 5rem;
+}
+
+.Navegacion-Principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+    .boton:hover {
+        cursor: pointer;
+    }
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.Navegacion-Principal a:hover {
+    background-color: var(--primario);
+    color: var(--Oscuro);
+}
+
+.Navegacion-Principal {
+    display: flex;
+    flex-direction: column;
+}
+/* Utilidades */
+.w-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+
+.nav_bg {
+    background-color: var(--secundario);
+}
+
+.Contenedor {
+    max-width: 120rem;
+    margin: 0 auto; /* Codigo resumido en solo 2 atributos*/
+    margin: 3rem;
+    border-radius: 5rem;
+    margin-top: 5rem;
+}
+.ContenedorC {
+    max-width: 120rem;
+    margin: 0 auto; /* Codigo resumido en solo 2 atributos*/
+    margin: 3rem;
+    border-radius: 5rem;
+    margin-top: 15rem;
+}
+
+@media (min-width: 768px) {
+    .Navegacion-Principal {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.hero {
+    background-image: url(/Vista/HTML/img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+    margin-right: -2rem;
+    margin-left: -2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0,0,0, .6); /* Sintaxis vieja */
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .contenido-hero h2, .contenido-hero p {
+        color: var(--blanco);
+    }
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Servicios */
+.servicios, .Navegacion-Principal, .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: allways;
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Divide las columnas en 3 fracciones */
+        grid-template-columns: repeat(3,1fr); /* Es lo mismo pero mas corto*/
+        column-gap: 1rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.servicio .Iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Yo {
+    display: grid;
+    grid-template-columns: 1fr; /* Divide las columnas en 3 fracciones */ /* Es lo mismo pero mas corto*/
+    column-gap: 5rem;
+}
+
+.Iconos1 {
+    background-image: url(../img/yo.jpg);
+    border-radius: 50;
+}
+
+.servicio1 .Iconos1 {
+    height: 20rem;
+    width: 20rem;
+    padding: 10rem;
+    background-size: cover;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.servicio1 p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio1 h3 {
+    color: var(--secundario);
+    font-weight: normal;
+    text-align: center;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Formulario */
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /** utilizar el valor mas pequeño**/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+    .formulario fieldset {
+        border: none;
+    }
+
+    .formulario legend {
+        text-align: center;
+        color: var(--primario);
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+
+@media (min-width: 768px) {
+    .Contenedor-campos {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1/3;
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+    .campo label {
+        color: var(--blanco);
+        font-weight: bold;
+        margin-bottom: .5rem;
+        display: block;
+    }
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.footer {
+    text-align: center;
+}
+
+/* Estilos generales */
+.table {
+    width: 60%;
+    border-collapse: collapse;
+    border: 0.4rem solid black;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+  .tableC {
+    width: 60%;
+    border-collapse: collapse;
+    border: 0.4rem solid black;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .table tr th,
+  .table tr td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 0.4rem solid black;
+  }
+
+  .tableC tr th,
+  .tableC tr td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 0.4rem solid black;
+  }
+
+  /* Encabezado */
+  .table thead tr th {
+    background: var(--blanco);
+    border: 0.4rem solid black;
+    color: var(--Oscuro);
+    font-weight: bold;
+    font-size: 4rem;
+    border-radius: 2rem;
+  }
+
+
+
+  .tableC thead tr th {
+    background: var(--blanco);
+    border: 0.4rem solid black;
+    color: var(--Oscuro);
+    font-weight: bold;
+    font-size: 4rem;
+    border-radius: 2rem;
+  }
+  .buttontable{
+    font-size: 3rem;
+    border-radius: 5rem;
+    color: #000000;
+    background-color: var(--blanco);
+  }
+
+/* Filas pares e impares */
+.table tbody tr:nth-child(even) {
+    background: #f2f2f2;
+  }
+
+  .table tbody tr:nth-child(odd) {
+    background: #fff;
+  }
+
+  /* Celdas */
+  .table td {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    font-size: 3rem;
+    background-color: var(--blanco);
+  }
+  td{
+    background-color: var(--blanco);
+  }
+
+  .table td:last-child {
+    border-right: none;
+  }
+
+  /* Resaltado al hover */
+  .table tbody tr:hover {
+    background: #f1f1f1;
+  }
+
+  .IniciarSesion{
+    font-size: 9rem;
+  }
+
+
+  .container label, .container input {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .container input {
+    width: 100%;
+    padding: 5px;
+  }
+
+  /* Estilos para el botón de inicio de sesión */
+  .buttonI {
+    margin-top: 40rem;
+    background-color: #008B8B;
+    font-size: 4rem;
+    color: #000000;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4rem;
+    width: 50rem;
+    height: 10rem;
+    font-weight: bold;
+  }
+
+  .container{
+    font-size: 5rem;
+    text-align: center;
+    display:block;
+    margin-top: 5rem;
+  }
+  input{
+    font-size: 4rem;
+    width: 80rem;
+    height: 8rem;
+    border: 1rem;
+    color: var(--Oscuro);
+    background-color: #008B8B;
+    border-radius: 2rem;
+  }
+  .Registrar{
+    text-decoration: underline;
+    text-align: left;
+    font-size: 3.5rem;
+
+  }
+  .aRegistrar{
+    text-decoration: underline;
+    text-align: left;
+    font-size: 3.5rem;
+    color: #000000;
+  }
+
+.crearbutton{
+    margin-top: 5rem;
+    margin-left: 18rem;
+}
+.marginl{
+    margin-top: 3rem;
+    font-size: 5rem;
+}
+.headerA {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #1C1D2C ;
+    height: 17rem;
+    margin-left: 0rem;
+    margin-right: -2rem;
+
+  }
+  .headerC {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #1C1D2C ;
+    height: 20rem;
+    margin-right: -2rem;
+
+  }
+
+  .titulo {
+    margin: 0; /* Elimina el margen predeterminado del h1 */
+    display: flex; /* Agregar display: flex para alinear el texto y el ícono horizontalmente */
+    align-items: center; /* Centrar verticalmente el texto y el ícono en el h1 */
+    margin-left: 20rem ;
+  }
+
+  .icon-tabler {
+    margin-left: auto; /* Agregar espacio entre el h1 y el icono SVG */
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .combobox{
+    font-size: 5rem;
+  }
+  .metodo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  .hmetodo{
+    font-size: 6rem;
+    text-align: left;
+  }
+  #combo-box option {
+    font-size: 2rem; /* Cambia el tamaño de fuente aquí (por ejemplo, 12px) */
+}
+.botonCarrito{
+    font-size: 4rem;
+    width: 60rem;
+    height: 10rem;
+    border-radius: 4rem;
+    background-color: #126529 ;
+    color: var(--blanco);
+
+}
+.contenedorboton{
+    display: flex;
+    justify-content: center;
+}
+
+.ContenedorL{
+    max-width: 120rem;
+    margin: 0 auto; /* Codigo resumido en solo 2 atributos*/
+    margin: 3rem;
+    border-radius: 5rem;
+    margin-top: 5rem;
+
+}
+.sombraL {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 5rem;
+}
+.sombraO {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    box-shadow: 0px 5px 15px 0px rgba(38,38,38,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    
+    
+}
+.llogin{
+    font-size: 5rem;
+
+}
+.containerlogin{
+    margin-left: 19rem;
+}
+.productos{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+
+}
+.productos:hover{
+    font-size:3.5rem ;
+}
+.imgp{
+    width: 70rem;
+    height: 40rem;
+    border-radius: 7rem;
+    margin-top: 5rem;
+}
+.imgp:hover{
+    box-shadow:  10px 10px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+.imgp:hover::before{
+    content: "Ver más";
+    display: block;
+    text-align: center;
+
+}
+
+/* footer */
+.app-footer {
+    font-size: 5rem;
+    background-color: #FFFAFA;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+    position: sticky; /* Hace que la barra inferior sea "sticky" */
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+    z-index: 2; /* Asegura que la barra inferior esté en un "z-index" superior al contenido principal */
+    border-top: 0.2rem solid black;
+    margin-bottom: 0rem;
+    margin-top: 50rem;
+  }
+
+  .app-footer a {
+    color: var(--Oscuro);
+    text-decoration: none;
+  }
+
+  .app-footer a {
+    margin-right: 2rem;  
+}
+  
+
+  /* .app-nav{
+    display: flex;
+    justify-content:space-around;
+
+  } */
+a{
+    padding-left: 5rem;
+}
+.descripcion{
+    font-size: 5rem;
+    text-align: left;
+}
+.textosoftware{
+    font-size: 3rem;
+    padding-top: 3rem;
+}
+.botonsoft{
+    margin-top: 20rem;
+}
+.h2precio{
+    text-align: left;
+    font-size: 5rem;
+    margin-top: 19rem;
+}
+.h2precioO{
+    text-align: left;
+    font-size: 2.5rem;
+    margin-top: 10rem;
+}
+#contenido {
+    margin-bottom: 50px; /* Establece el valor según tus necesidades */
+}
+.imgcarrito{
+    width: 25rem;
+    height: 15rem;
+    border-radius: 5rem;
+    margin-right: 5rem;
+}
+.textocarrito{
+    font-size: 3.7rem;
+    color: var(--blanco);
+}
+.ordenarcarro{
+    display: block;
+    justify-content: space-around;
+}
+.contenedor_carrito{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 5rem;
+}
+.RRR{
+    display: flex;
+    justify-content: space-between;
+}
+.textoR{
+    font-size: 3.5rem;
+}
+.ubicacioncontainer{
+    display: block;
+}
+.ubicacionselect{
+    font-size: 5rem;
+    width: 50rem;
+    background-color: var(--grisclaro);
+}
+select option{
+    font-size: 1.5rem;
+}
+
+.metodo1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+  }
+  .metodo2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+  }
+  .Modificar{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: -5555rem;
+  }
+  #ModificarButton {
+    display: none;
+}
+.textO{
+    text-align: center;
+    font-size: 10rem;
+}
+.centerimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.icon2{
+    display: flex;
+    align-items: center;
+    width: 50rem;
+}
+.botonsiguiente{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #126529 ;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    font-size: 8rem;
+    cursor: pointer;
+}
+.centrobot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
